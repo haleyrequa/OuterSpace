@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/BackgroundManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/AI/SteeringBehavoir.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Models/Rocket.cs" Line="23" Column="17" />
+      <File FileName="Assets/Scripts/Models/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/ScoreManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/BackgroundManager.cs" Line="10" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
