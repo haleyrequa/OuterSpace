@@ -14,25 +14,16 @@ public class Player : GameEntity {
 	private bool shooting;
 	private float shootFrequency = 0.2f;
 
-	float x;
-	float y;
-	float z;
-
 	// Use this for initialization
 	void Start () {
-		shooting = true;
-		StartCoroutine (Shoot ());
+	//	shooting = true;
+	//	StartCoroutine (Shoot ());
 	}
 
 	public void Revive() {
 		spriteRendered.sprite = normalSprite;
 		shooting = true;
 		StartCoroutine (Shoot ());
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		Navigation ();
 	}
 
 	private IEnumerator Shoot() {
@@ -54,34 +45,6 @@ public class Player : GameEntity {
 		rocket.GetComponent<Rocket> ().SetAuthor (Rocket.RocketOwner.Player);
 		if(shooting)
 			StartCoroutine (Shoot ());
-	}
-
-	private void Navigation (){
-		x = outerSpaceContainer.transform.position.x;
-		y = outerSpaceContainer.transform.position.y;
-		z = outerSpaceContainer.transform.position.z;
-
-		Debug.Log ("x " + x + " -- y " + y + " -- W " + Screen.width/2 + " -- H " + Screen.height/2);
-		if (Input.GetKey (KeyCode.A)) {
-			x += 2f;
-			x = x > OuterSpaceControl.PLAYERMAXBOUNDS.x? OuterSpaceControl.PLAYERMAXBOUNDS.x: x;
-			outerSpaceContainer.transform.position = new Vector3 (x, y, z);
-		}
-		if (Input.GetKey (KeyCode.W)) {
-			y -= 2f;
-			y = y < OuterSpaceControl.PLAYERMINBOUNDS.y ? OuterSpaceControl.PLAYERMINBOUNDS.y: y;
-			outerSpaceContainer.transform.position = new Vector3 (x, y, z);
-		}
-		if (Input.GetKey (KeyCode.S)) {
-			y += 2f;
-			y = y > OuterSpaceControl.PLAYERMAXBOUNDS.y ? OuterSpaceControl.PLAYERMAXBOUNDS.y: y;
-			outerSpaceContainer.transform.position = new Vector3 (x, y, z);
-		}
-		if (Input.GetKey (KeyCode.D)) {
-			x -= 2f;
-			x = x < OuterSpaceControl.PLAYERMINBOUNDS.x ? OuterSpaceControl.PLAYERMINBOUNDS.x : x;
-			outerSpaceContainer.transform.position = new Vector3 (x, y, z);
-		}
 	}
 
 	public void Die () {

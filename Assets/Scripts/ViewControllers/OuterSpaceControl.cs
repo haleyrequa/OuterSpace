@@ -17,7 +17,7 @@ public class OuterSpaceControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(SpawnAliens(spawnTime, alienCount));
+		//StartCoroutine(SpawnAliens(spawnTime, alienCount));
 	}
 
 	private IEnumerator SpawnAliens(float time, int count){
