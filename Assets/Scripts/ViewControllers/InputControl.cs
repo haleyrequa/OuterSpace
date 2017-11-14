@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputControl : MonoBehaviour {
 
-	public BackgroundManager background;
+	public Background background;
 	public Transform aliens;
 	public Transform player;
 	public Transform camera;
